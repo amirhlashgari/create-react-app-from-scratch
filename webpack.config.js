@@ -10,7 +10,7 @@ module.exports = {
         filename: 'bundle.js',
         publicPath: ''
     },
-    devtool: 'cheap-module-eval-source-map',
+    devtool: 'eval-cheap-module-source-map',
     module: {
         rules: [
             {
@@ -35,15 +35,21 @@ module.exports = {
                     {
                         loader: 'postcss-loader',
                         options: {
-                            ident: 'postcss',
-                            plugins: () => [autoprefixer()]
+                            postcssOptions: {
+                                ident: 'postcss',
+                                plugins: () => [autoprefixer()]
+                            }
                         }
                     }
                 ]
             },
             {
                 test: /\.(png|jp?g|gif)$/,
-                loader: 'url-loader?limit=8000&name=images/[name].[ext]',
+                loader: 'url-loader',
+                options: {
+                    limit: 8000,
+                    name: 'images/[name].[ext]'
+                },
                 exclude: /node_modules/
             }
         ]

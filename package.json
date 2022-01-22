@@ -13,7 +13,7 @@
   },
   "author": "Amirhosein Lashkari",
   "license": "ISC",
-  "browserlist": "> 1%, last 2 versions",
+  "browserslist": "> 1%, last 2 versions",
   "bugs": {
     "url": "https://github.com/amirhlashgari/create-react-app-from-scratch/issues"
   },
@@ -27,6 +27,7 @@
     "autoprefixer": "^10.4.2",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "postcss-loader": "^6.2.1",
     "style-loader": "^3.3.1",
